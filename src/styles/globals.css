@@ -1,0 +1,2 @@
+@import 'component-library/dist/index.css';
+@import 'tailwind.css'; /* This should go after component library styles as it overwrites some CSS variables */

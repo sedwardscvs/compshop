@@ -1,0 +1,52 @@
+{
+  "name": "compshop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "build:tailwind": "pnpm tailwindcss -i src/styles/globals.css -o src/styles/dist.css",
+    "db:push": "drizzle-kit push:pg",
+    "db:studio": "drizzle-kit studio",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.7.1",
+    "@tabler/icons-react": "^2.46.0",
+    "component-library": "git+https://stash.cvs.com/scm/tools/component-library.git#main",
+    "drizzle-orm": "^0.29.3",
+    "next": "^14.0.4",
+    "next-themes": "^0.2.1",
+    "postgres": "^3.4.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.44.7",
+    "@types/node": "^18.17.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "autoprefixer": "^10.4.14",
+    "drizzle-kit": "^0.20.9",
+    "eslint": "^8.54.0",
+    "eslint-config-cvs": "git+https://stash.cvs.com/scm/tools/eslint-config-cvs.git#main",
+    "eslint-config-next": "^14.0.4",
+    "postcss": "^8.4.31",
+    "prettier": "^3.1.0",
+    "prettier-config-cvs": "git+https://stash.cvs.com/scm/tools/prettier-config-cvs.git#main",
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "tailwind-config": "git+https://stash.cvs.com/scm/tools/tailwind-config.git#main",
+    "tailwindcss": "^3.3.5",
+    "tsconfig": "git+https://stash.cvs.com/scm/tools/tsconfig.git#main",
+    "typescript": "^5.1.6"
+  },
+  "ct3aMetadata": {
+    "initVersion": "7.26.0"
+  },
+  "packageManager": "pnpm@8.6.3"
+}
