@@ -1,28 +1,84 @@
-# Create T3 App
+# compshop
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+> A tool for comparing CVS prices with our competitors.
 
-## What's next? How do I make an app with this?
+## 📖 Table of Contents
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- [Commands](#-commands)
+- [Installing](#-installing)
+    - [Prerequisites](#prerequisites)
+- [Getting Started](#-getting-started)
+- [Building for Production](#-building-for-production)
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## 📣 Commands
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+The following commands are available from the root of the project:
 
-## Learn More
+```shell
+# Builds the app for production
+build
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+# Compiles Tailwind styles into a CSS file
+build:tailwind
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+# Starts the development server
+dev
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+# Runs ESLint rules
+lint
 
-## How do I deploy this?
+# Runs the production build and serves the app
+start
+```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## 💻 Installing
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en)
+- [pnpm](https://pnpm.io/installation)
+
+> Note: This project uses `pnpm` as its package manager.
+> Do not use `npm` or `yarn` as this will generate duplicate lockfiles and may lead to unexpected behavior for other developers.
+
+Install the dependencies with the following command:
+
+```shell
+pnpm install
+```
+
+## ⌨️ Getting Started
+
+### Environment variables
+Once the dependencies are installed, you will need to create a `.env` file before you can begin development.
+
+Make a copy of `.env.example` and rename it to `.env`.
+
+```shell
+cp .env.example .env
+```
+
+Then you will need to fill in the corresponding values for the environment variables in the `.env` file.
+
+
+### Starting the development server
+From there you can start the development server with the following command from the root of the repo:
+
+```shell
+pnpm dev
+```
+
+## 📦 Building for production
+
+You can build the project with the following command from the root of the repo:
+
+```shell
+pnpm build
+```
+
+This will generate a `.next` folder with the compiled files.
+Then you can serve up the production build locally or in a deployed environment using this command:
+
+```shell
+pnpm start
+```
