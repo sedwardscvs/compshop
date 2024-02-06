@@ -5,8 +5,10 @@ jobs:
     name: Build project
     runs-on: ubuntu-latest
     steps:
+      - name: Export SHELL
+        run: export SHELL
       - name: Install pnpm
-        run: SHELL=$SHELL curl -fsSL https://get.pnpm.io/install.sh | bash -
+        run: ˚curl -fsSL https://get.pnpm.io/install.sh | bash -
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Install PNPM dependencies
