@@ -3,7 +3,7 @@ on: push
 jobs:
   build-project:
     name: Build project
-    runs-on: ubuntu-latest
+    runs-on: alpine-latest
     steps:
       - name: Install pnpm
         run: curl -fsSL https://get.pnpm.io/install.sh | sh -
