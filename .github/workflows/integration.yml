@@ -10,6 +10,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Install PNPM dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
       - name: Build project assets
         run: pnpm build
