@@ -1,9 +1,5 @@
 name: Build CompShop Application
 on: push
-defaults:
-  run:
-    shell: bash
-    working-directory: /usr/src/app
 jobs:
   build-project:
     name: Build project
