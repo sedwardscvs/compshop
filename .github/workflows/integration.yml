@@ -13,8 +13,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '21'
-      - name: Show directory content
-        run: ls
       - name: Install pnpm
         run: npm install --global pnpm
       - name: Checkout code
