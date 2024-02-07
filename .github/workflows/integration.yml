@@ -1,5 +1,9 @@
 name: Build CompShop Application
 on: [push, pull_request]
+defaults:
+    run:
+        working-directory: ./compshop
+        shell: bash
 jobs:
   build-project:
     name: Build project
