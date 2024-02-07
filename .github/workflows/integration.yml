@@ -13,8 +13,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '21'
-      - name: Output pwd
-        run: echo $PWD; ls -la
+      - name: Show directory content
+        run: ls -la
       - name: Install pnpm
         run: npm install --global pnpm
       - name: Checkout code
