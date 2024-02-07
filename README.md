@@ -50,16 +50,7 @@ pnpm install
 ## ⌨️ Getting Started
 
 ### Environment variables
-Once the dependencies are installed, you will need to create a `.env` file before you can begin development.
-
-Make a copy of `.env.example` and rename it to `.env`.
-
-```shell
-cp .env.example .env
-```
-
-Then you will need to fill in the corresponding values for the environment variables in the `.env` file.
-
+Environment variables are stored in the accompanying `.env` file.  Any new values should be placed there.
 
 ### Starting the development server
 From there you can start the development server with the following command from the root of the repo:
