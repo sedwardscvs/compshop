@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Copy example .env file
-        run: cp .env.example .env
+        run: cp ./.env.example ./.env
       - name: Install pnpm
         run: npm install --global pnpm
       - name: Checkout code
