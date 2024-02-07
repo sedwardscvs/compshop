@@ -2,7 +2,7 @@ name: Build CompShop Application
 on: [push, pull_request]
 defaults:
     run:
-        working-directory: /home/runner/work/compshop
+        working-directory: /home/runner/work/compshop/compshop
         shell: bash
 jobs:
   build-project:
