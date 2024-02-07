@@ -2,7 +2,7 @@ name: Build CompShop Application
 on: [push, pull_request]
 defaults:
     run:
-        working-directory: ./compshop
+        working-directory: /home/runner/work/compshop
         shell: bash
 jobs:
   build-project:
@@ -13,8 +13,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '21'
-      - name: Chdir up one level
-        run: cd ..
       - name: Output pwd
         run: echo $PWD; ls -la
       - name: Install pnpm
