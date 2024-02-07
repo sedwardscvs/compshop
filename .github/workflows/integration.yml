@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: '21'
       - name: Output pwd
-        run: echo $PWD
+        run: echo $PWD; ls -la
       - name: Install pnpm
         run: npm install --global pnpm
       - name: Checkout code
