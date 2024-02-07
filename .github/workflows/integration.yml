@@ -5,8 +5,12 @@ jobs:
     name: Build project
     runs-on: ubuntu-latest
     steps:
-      - name: Copy example .env file
-        run: cp ./.env.example ./.env
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Output pwd
+        run: echo $PWD
       - name: Install pnpm
         run: npm install --global pnpm
       - name: Checkout code
