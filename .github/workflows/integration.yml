@@ -5,39 +5,19 @@ defaults:
         working-directory: /home/runner/work/compshop/compshop
         shell: bash
 jobs:
-  setup-node:
-    name: Setup Node.js
+  build-project:
+    name: Build project
     runs-on: ubuntu-latest
     steps:
       - name: Set up Node.js
-        uses: sedwardscvs/setup-node@main
+        uses: sedwardscvs/setup-node@v4
         with:
-          node-version: '16'
-  install-pnpm:
-    name: Install pnpm
-    needs: setup-node
-    runs-on: ubuntu-latest
-    steps:
+          node-version: '21'
       - name: Install pnpm
         run: npm install --global pnpm
-  checkout-code:
-    name: Checkout code
-    needs: install-pnpm
-    runs-on: ubuntu-latest
-    steps:
       - name: Checkout code
-        uses: sedwardscvs/checkout@main
-  install-deps:
-    name: Install dependencies
-    needs: checkout-code
-    runs-on: ubuntu-latest
-    steps:
+        uses: sedwardscvs/checkout@v4
       - name: Install PNPM dependencies
-        run: pnpm install
-  build:
-    name: Build
-    needs: install-deps
-    runs-on: ubuntu-latest
-    steps:
-      - name: Build
+        run: pnpm install --no-frozen-lockfile
+      - name: Build project assets
         run: pnpm build
