@@ -15,24 +15,28 @@ jobs:
           node-version: '16'
   install-pnpm:
     name: Install pnpm
+    needs: setup-node
     runs-on: ubuntu-latest
     steps:
       - name: Install pnpm
         run: npm install --global pnpm
   checkout-code:
     name: Checkout code
+    needs: install-pnpm
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: sedwardscvs/checkout@main
   install-deps:
     name: Install dependencies
+    needs: checkout-code
     runs-on: ubuntu-latest
     steps:
       - name: Install PNPM dependencies
         run: pnpm install
   build:
     name: Build
+    needs: install-deps
     runs-on: ubuntu-latest
     steps:
       - name: Build
