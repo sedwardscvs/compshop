@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Node.js
-        uses: sedwardscvs/setup-node@v4
+        uses: sedwardscvs/setup-node@main
         with:
           node-version: '21'
       - name: Install pnpm
         run: npm install --global pnpm
       - name: Checkout code
-        uses: sedwardscvs/checkout@v4
+        uses: sedwardscvs/checkout@main
       - name: Install PNPM dependencies
         run: pnpm install --no-frozen-lockfile
       - name: Build project assets
