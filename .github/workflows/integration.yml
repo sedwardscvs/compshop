@@ -1,5 +1,5 @@
 name: Build CompShop Application
-on: [push, pull_request]
+on: [push, workflow_dispatch]
 defaults:
     run:
         working-directory: /home/runner/work/compshop/compshop
